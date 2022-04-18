@@ -4,7 +4,7 @@
 #ifndef _FASTIO_HPP
 #define _FASTIO_HPP
 
-#include <stdlib.h>
+#include <stdio.h>
 
 template <typename t> void in(t &a) {
     a=0;
@@ -20,7 +20,7 @@ template <typename t> void in(t &a) {
 template <typename t> void _Out(t &a) {
     if(a==0) return ;
     _Out(a/10);
-    putchar()
+    putchar(a%10+'0');
 }
 
 #endif

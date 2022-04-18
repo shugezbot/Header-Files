@@ -35,11 +35,25 @@ bool _VChar(char c) {
 template <typename t> class Matrix{
     private:
         t Mtx[MTX_MX+5][MTX_MX+5];
-        int n,m;
     public:
+        int n,m;
+        void push(int i,int j,t a) {
+            Mtx[i][j]=a;
+        }
         void out() {
-            
+            for(int i=1;i<=n;++i) {
+                for(int j=1;j<=m;++j) {
+                    _Out(Mtx[i][j]);
+                    putchar(' ');
+                }
+                putchar(10);
+            }
         }
 };
+
+Matrix operator * (Matrix a,Matrix b) {
+    Matrix C;
+    for(int i=1;i<=a.)
+}
 
 #endif
