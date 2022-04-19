@@ -45,7 +45,7 @@ template <typename t> t ExGcd(t a,t b,t &x,t &y) {
     }
 }
 
-template <typename t> inv(t a,t n,t Md) {
+template <typename t> t __InV(t a,t n,t Md) {
     t d,x,y;
     d=ExGcd(a,n,x,y);
     return d==Md ? (x%n+n) % n : -1;
