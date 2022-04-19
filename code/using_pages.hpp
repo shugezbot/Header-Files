@@ -37,6 +37,13 @@ template <typename t> struct Matrix{
         t Mtx[MTX_MX+5][MTX_MX+5];
 //    public:
         int n,m;
+        void clean(t k) {
+            for(int i=1;i<=n;++i) {
+                for(int j=1;j<=m;++j) {
+                    Mtk[i][j]=k;
+                }
+            }
+        }
         void push(int i,int j,t a) {
             Mtx[i][j]=a;
         }
@@ -69,6 +76,17 @@ template <typename t> Matrix<t> operator * (Matrix<t> a,Matrix<t> b) {
             }
         }
     }
+}
+
+template <typename t,typename t2> Matrix<t> _PowMtx(Matrix<t> a,t2 b) {
+    Matrix<t> C;
+    C.clean(1);
+    while(b) {
+        if(b&1) C*=a;
+        a*=a;
+        b>>=1;
+    }
+    return C;
 }
 
 #endif
