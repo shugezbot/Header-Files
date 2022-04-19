@@ -1,4 +1,4 @@
-/*2022.04.18 Update 
+/*2022.04.19 Update 
   Author: Shuger*/
 
 #ifndef _MATH_HPP
